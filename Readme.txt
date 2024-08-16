@@ -3,3 +3,18 @@
 3. Se ha creado 3 modelos, Cursos, Libros y Blogs, cada uno con el respectivo registro
 4. Para visualizar los datos de en la SQLLite, ingresar a la ruta de admin por defecto: http://127.0.0.1:8000/admin
 5. Las credenciales de usuario y contraseña es "root"
+
+Los usuarios pueden realizar las siguientes acciones:
+
+- Listar blogs
+- utilizar el buscador
+- ver un blog en particular 
+- pueden registrar un usuario
+- login 
+- cerrar sesion
+- solo el usuario root puede hacer todos los procedimientos. 
+
+Pruebas Realizadas
+Ver archivo titulado "Pruebas Proyecto Python Flavia.xlsx" el cual se encuentra en el presente repositorio 
+
+Video Demostración
