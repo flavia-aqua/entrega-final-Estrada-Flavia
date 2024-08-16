@@ -16,5 +16,7 @@ Los usuarios pueden realizar las siguientes acciones:
 
 Pruebas Realizadas
 Ver archivo titulado "Pruebas Proyecto Python Flavia.xlsx" el cual se encuentra en el presente repositorio 
+https://docs.google.com/spreadsheets/d/18kqQg3A2NyDwvjIulGWUd1iZ3kdKOzd8kgcnEIqw4DQ/edit?usp=sharing
 
 Video Demostración
+https://drive.google.com/file/d/12tiEYrjgJ4xeGOYxbfHMWNvZbEe8q9b7/view?usp=sharing
