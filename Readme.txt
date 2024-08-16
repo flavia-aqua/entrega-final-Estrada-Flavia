@@ -15,7 +15,7 @@ Los usuarios pueden realizar las siguientes acciones:
 - solo el usuario root puede hacer todos los procedimientos. 
 
 Pruebas Realizadas
-Ver archivo titulado "Pruebas Proyecto Python Flavia.xlsx" el cual se encuentra en el presente repositorio 
+Ver archivo titulado "Pruebas Proyecto Python EF.xlsx" el cual se encuentra en el presente repositorio 
 https://docs.google.com/spreadsheets/d/18kqQg3A2NyDwvjIulGWUd1iZ3kdKOzd8kgcnEIqw4DQ/edit?usp=sharing
 
 Video Demostración
