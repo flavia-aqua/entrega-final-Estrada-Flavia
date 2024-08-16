@@ -1,0 +1,65 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div class="col-4 mb-4 mt-3 py-3 px-3 mx-auto border border-dark-subtle border-1 rounded-4">
+  <h2 class="text-center pb-2">Busca un Blog</h2>
+    <form method="POST" action="{% url 'blogs' %}"> {% csrf_token %}
+      <div class="mb-3">
+          <label for="tituloBlog" class="form-label">Nombre del blog</label>
+          <input type="text" class="form-control" id="tituloBlog" name="titulo" placeholder="Ingrese el nombre de un blog">
+        </div>
+      <div class="col-12 align-self-center mx-auto py-2">
+          <button type="submit" class="btn btn-primary col-4 offset-4">Buscar</button>
+      </div>
+    </form>
+  </div>
+{% if flag == False %}
+<div class="col-8 offset-2 mb-4 py-3 px-3 mx-auto">
+<h3 class="text-center pb-3">Lista de Blogs</h3>
+
+{% for blog in blogs %}
+<div class="card border-dark mb-3 col-12">
+  <div class="card-header">{% if blog.tema == "1" %}
+    GTM
+{% elif blog.tema == "2" %}
+    GA4
+{% elif blog.tema == "3" %}
+    BQ
+{% else %}
+    Desconocido
+{% endif %}</div>
+  <div class="card-body">
+    <a href="{% url 'detalle_blog' blog.pk %}"><h5 class="card-title text-center" >{{ blog.titulo }}</h5></a>
+    <p class="card-text text-justify">{{ blog.cuerpo }}</p>
+  </div>
+  <div class="card-footer bg-transparent border-dark" >Autor: {{ blog.autor }} - Fecha: {{blog.fecha}}</div>
+</div>
+{% endfor %}
+</div>
+{% else %}
+<div class="col-8 offset-2 mb-4 py-3 px-3 mx-auto">
+  <h3 class="text-center pb-3">Lista de Blogs</h3>
+  
+  {% for blog in blogs %}
+  <div class="card border-dark mb-3 col-12">
+    <div class="card-header">{% if blog.tema == "1" %}
+      GTM
+  {% elif blog.tema == "2" %}
+      GA4
+  {% elif blog.tema == "3" %}
+      BQ
+  {% else %}
+      Desconocido
+  {% endif %}</div>
+    <div class="card-body">
+      <h5 class="card-title" >{{ blog.titulo }}</h5>
+      <p class="card-text text-justify">{{ blog.cuerpo }}</p>
+    </div>
+    <a class="card-footer bg-transparent border-dark" href="{% url 'detalle_blog' blog.pk %}">Autor: {{ blog.autor }} - Fecha: {{blog.fecha}}</a>
+  </div>
+  {% endfor %}
+  </div>
+  {% endif %}
+{% endblock %}

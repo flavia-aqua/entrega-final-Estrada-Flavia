@@ -1,0 +1,27 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div id="carouselExample" class="my-5 carousel slide col-11 mx-auto w-50 h-70" data-bs-touch="false">
+  <div class="carousel-inner col-12">
+    <div class="carousel-item active col-12" data-bs-interval="2000">
+      <img src="https://res.cloudinary.com/highereducation/image/upload/v1533591754/TheBestColleges.org/study-notebooks.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item col-12" data-bs-interval="2000">
+      <img src="https://www.sacap.edu.za/wp-content/uploads/2023/10/unique-study-tips-sacap.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item col-12" data-bs-interval="2000">
+      <img src="https://www.heysigmund.com/wp-content/uploads/Studying-9-Scientifically-Proven-Ways-to-Supercharge-Your-Learning.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
+</div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<div class="col-4 my-4 py-3 px-3 mx-auto border border-dark-subtle border-1 rounded-4">
+  <h2 class="text-center pb-2">Registra un Blog</h2>
+  <form method="POST" action="{% url 'crear_blog' %}" enctype="multipart/form-data"> 
+    {% csrf_token %}
+    
+    <!-- Nombre del blog -->
+    <div class="mb-3">
+      <label for="{{ form.titulo.id_for_label }}" class="form-label">Nombre del blog</label>
+      {{ form.titulo }}
+    </div>
+    
+    <!-- Subtítulo del blog -->
+    <div class="mb-3">
+      <label for="{{ form.subtitulo.id_for_label }}" class="form-label">Subtítulo</label>
+      {{ form.subtitulo }}
+    </div>
+
+    <!-- Tema del blog -->
+    <div class="mb-3">
+      <label class="pb-3" for="{{ form.tema.id_for_label }}">Tema</label>
+      {{ form.tema }}
+    </div>
+
+    <!-- Cuerpo del blog -->
+    <div class="mb-3">
+      <label for="{{ form.cuerpo.id_for_label }}" class="form-label">Cuerpo del blog</label>
+      {{ form.cuerpo }}
+    </div>
+
+    <!-- Imagen del blog -->
+    <div class="mb-3">
+      <label for="{{ form.imagen.id_for_label }}" class="form-label">Imagen</label>
+      {{ form.imagen }}
+    </div>
+
+    <!-- Botón de Envío -->
+    <div class="col-12 align-self-center mx-auto py-2">
+      <button type="submit" class="btn btn-primary col-4 offset-4">Enviar</button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
